@@ -1,0 +1,13 @@
+services:
+  taskflow-ui:
+    build:
+      context: .
+      args:
+        VITE_API_BASE_URL: /api/v1
+    container_name: taskflow-ui
+    ports:
+      - "8080:80"
+    environment:
+      BACKEND_HOST: host.docker.internal:5000
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
