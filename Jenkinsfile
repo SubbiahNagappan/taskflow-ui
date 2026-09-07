@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'taskflow-ui-docker-agent' }
+  agent { label 'taskflow-ui-dev' }
 
   environment {
     IMAGE_NAME = 'taskflow-ui'
